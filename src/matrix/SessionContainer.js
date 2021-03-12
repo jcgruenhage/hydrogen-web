@@ -165,6 +165,7 @@ export class SessionContainer {
         this._storage = await this._platform.storageFactory.create(sessionInfo.id);
         // no need to pass access token to session
         const filteredSessionInfo = {
+            id: sessionInfo.id,
             deviceId: sessionInfo.deviceId,
             userId: sessionInfo.userId,
             homeServer: sessionInfo.homeServer,
